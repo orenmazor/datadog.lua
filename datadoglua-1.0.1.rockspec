@@ -1,7 +1,7 @@
 package = "DataDogLua"
 version = "1.0-1"
 source = {
-   url = "..." -- We don't have one yet
+   url = "git://github.com/orenmazor/datadoglua"
 }
 description = {
    summary = "Datadog api in lua",
@@ -15,5 +15,8 @@ dependencies = {
    "lua ~> 5.1"
 }
 build = {
-   -- We'll start here.
+   type = "builtin",
+   modules = {
+      datadoglua = "src/datadog.lua",
+   }
 }
